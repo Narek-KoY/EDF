@@ -1085,48 +1085,7 @@ namespace EDF_CommonData
             }
         }
 
-        //static EDF_User ManagerAppRej(string RequestId, string Login, string status)
-        //{
-        //    SqlConnection con = new SqlConnection(ConString);
-        //    string selstr = string.Format("select top 1 * from Approve_reject where [Request_ID] = '{0}' and [User_ID] = '{1}' and [App_rej] is not null and [Status] = '{2}'", RequestId, Login, status);
-
-        //    SqlDataAdapter da = new SqlDataAdapter(selstr, con);
-        //    DataTable dt = new DataTable();
-        //    da.Fill(dt);
-
-        //    if (dt.Rows.Count == 0)
-        //    {
-        //        EDF_SPUser man = AD.GetUserBySPLogin(Login);
-        //        EDF_User u = new EDF_User();
-        //        u.FullName = man.FullName;
-        //        u.Department = man.Department;
-        //        u.PictureUrl = man.PictureUrl;
-        //        u.IsOk = null;
-
-        //        return u;
-        //    }
-        //    else
-        //    {
-        //        EDF_SPUser man = AD.GetUserBySPLogin(dt.Rows[0]["User_ID"].ToString());
-        //        EDF_User u = new EDF_User();
-
-        //        u.IsOk = dt.Rows[0]["App_rej"].ToString() == "True";
-        //        u.HasRep = dt.Rows[0]["Rep_Id"].ToString() != "";
-
-        //        if (u.HasRep)
-        //            man = man.Replacement;
-
-        //        u.FullName = man.FullName;
-        //        u.Department = man.Department;
-        //        u.PictureUrl = man.PictureUrl;
-        //        DateTime date;
-        //        DateTime.TryParse(dt.Rows[0]["App_rej_Date"].ToString(), out date);
-        //        u.ActionDate = date;
-        //        return u;
-        //    }
-        //}
-
-        static EDF_User ManagerAppRej(string RequestId, EDF_SPUser user)
+       static EDF_User ManagerAppRej(string RequestId, EDF_SPUser user)
         {
             string Login = user.Login;
             SqlConnection con = new SqlConnection(ConString);
