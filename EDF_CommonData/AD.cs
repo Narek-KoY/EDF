@@ -412,7 +412,6 @@ namespace EDF_CommonData
             get
             {
                 return FindGroup("EDF_CEO", true).AllUsers[0];
-               // return GetDicUser("ceo");
             }
         }
         public static EDF_SPUser HR
@@ -420,7 +419,6 @@ namespace EDF_CommonData
             get
             {
                 return FindGroup("EDF_HR", true).AllUsers[0];
-               // return GetDicUser("hr");
             }
         }
         public static EDF_SPUser CFO
@@ -428,7 +426,6 @@ namespace EDF_CommonData
             get
             {
                 return FindGroup("EDF_CFO", true).AllUsers[0];
-                // return GetDicUser("cfo");
             }
         }
         public static EDF_Group CCShiftEmployees
@@ -438,29 +435,6 @@ namespace EDF_CommonData
                 return GetDicGroup("ccshift");
             }
         }
-        //public static string CarPool
-        //{
-        //    get
-        //    {
-        //        try
-        //        {
-        //            foreach (SPListItem li in AD.GetSPListByName("emails"))
-        //            {
-        //                if (li["Title"].ToString().ToLower() == "carpool")
-        //                {
-        //                    return li["email"].ToString();
-        //                }
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            throw new Exception(ex.Message + ": In Carpool");
-        //        }
-        //        return null;
-
-        //    }
-        //}
-       
         #endregion
 
         #region Document PDF
