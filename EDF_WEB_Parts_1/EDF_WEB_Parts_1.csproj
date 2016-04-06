@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{04FDA265-AEC7-4776-B4D0-0D6B09D043EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EDF_WEB_Parts_1</RootNamespace>
+    <AssemblyName>EDF_WEB_Parts_1</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>C:\Users\Administrator\Desktop\EDF\Backup\</UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EDF_CommonData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7617617d69f91c7d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\EDF_CommonData\bin\Debug\EDF_CommonData.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Server, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Server.UserProfiles, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DashboardNotifications\DashboardNotifications.cs" />
+    <Compile Include="DashboardNotifications\DashboardNotificationsUserControl.ascx.cs">
+      <DependentUpon>DashboardNotificationsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DashboardNotifications\DashboardNotificationsUserControl.ascx.designer.cs">
+      <DependentUpon>DashboardNotificationsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseAccessRequest\DatabaseAccessRequest.cs" />
+    <Compile Include="DatabaseAccessRequest\DatabaseAccessRequestUserControl.ascx.cs">
+      <DependentUpon>DatabaseAccessRequestUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatabaseAccessRequest\DatabaseAccessRequestUserControl.ascx.designer.cs">
+      <DependentUpon>DatabaseAccessRequestUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage\ErrorPage.cs" />
+    <Compile Include="ErrorPage\ErrorPageUserControl.ascx.cs">
+      <DependentUpon>ErrorPageUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage\ErrorPageUserControl.ascx.designer.cs">
+      <DependentUpon>ErrorPageUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocalTravelRequest1\LocalTravelRequest1.cs" />
+    <Compile Include="LocalTravelRequest1\LocalTravelRequest1UserControl.ascx.cs">
+      <DependentUpon>LocalTravelRequest1UserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocalTravelRequest1\LocalTravelRequest1UserControl.ascx.designer.cs">
+      <DependentUpon>LocalTravelRequest1UserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserName\UserName.cs" />
+    <Compile Include="UserName\UserNameUserControl.ascx.cs">
+      <DependentUpon>UserNameUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserName\UserNameUserControl.ascx.designer.cs">
+      <DependentUpon>UserNameUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacationRequestCreate\VacationRequestCreate.cs" />
+    <Compile Include="VacationRequestCreate\VacationRequestCreateUserControl.ascx.cs">
+      <DependentUpon>VacationRequestCreateUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VacationRequestCreate\VacationRequestCreateUserControl.ascx.designer.cs">
+      <DependentUpon>VacationRequestCreateUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\MenuUserControl.ascx.cs">
+      <DependentUpon>MenuUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\MenuUserControl.ascx.designer.cs">
+      <DependentUpon>MenuUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="news_wp\news_wp.cs" />
+    <Compile Include="news_wp\news_wpUserControl.ascx.cs">
+      <DependentUpon>news_wpUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="news_wp\news_wpUserControl.ascx.designer.cs">
+      <DependentUpon>news_wpUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="New_Request\New_Request.cs" />
+    <Compile Include="New_Request\New_RequestUserControl.ascx.cs">
+      <DependentUpon>New_RequestUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New_Request\New_RequestUserControl.ascx.designer.cs">
+      <DependentUpon>New_RequestUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\Notifications.cs" />
+    <Compile Include="Notifications\NotificationsUserControl.ascx.cs">
+      <DependentUpon>NotificationsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notifications\NotificationsUserControl.ascx.designer.cs">
+      <DependentUpon>NotificationsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Print\Print.cs" />
+    <Compile Include="Print\PrintUserControl.ascx.cs">
+      <DependentUpon>PrintUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Print\PrintUserControl.ascx.designer.cs">
+      <DependentUpon>PrintUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statistics\Statistics.cs" />
+    <Compile Include="Statistics\StatisticsUserControl.ascx.cs">
+      <DependentUpon>StatisticsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Statistics\StatisticsUserControl.ascx.designer.cs">
+      <DependentUpon>StatisticsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacationRequestView\VacationRequestView.cs" />
+    <Compile Include="VacationRequestView\VacationRequestViewUserControl.ascx.cs">
+      <DependentUpon>VacationRequestViewUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VacationRequestView\VacationRequestViewUserControl.ascx.designer.cs">
+      <DependentUpon>VacationRequestViewUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDAR\ViewDAR.cs" />
+    <Compile Include="ViewDAR\ViewDARUserControl.ascx.cs">
+      <DependentUpon>ViewDARUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDAR\ViewDARUserControl.ascx.designer.cs">
+      <DependentUpon>ViewDARUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewLTR\ViewLTR.cs" />
+    <Compile Include="ViewLTR\ViewLTRUserControl.ascx.cs">
+      <DependentUpon>ViewLTRUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewLTR\ViewLTRUserControl.ascx.designer.cs">
+      <DependentUpon>ViewLTRUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRecRequests\ViewRecRequests.cs" />
+    <Compile Include="ViewRecRequests\ViewRecRequestsUserControl.ascx.cs">
+      <DependentUpon>ViewRecRequestsUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewRecRequests\ViewRecRequestsUserControl.ascx.designer.cs">
+      <DependentUpon>ViewRecRequestsUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome\Welcome.cs" />
+    <Compile Include="Welcome\WelcomeUserControl.ascx.cs">
+      <DependentUpon>WelcomeUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Welcome\WelcomeUserControl.ascx.designer.cs">
+      <DependentUpon>WelcomeUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DashboardNotifications\DashboardNotifications.webpart" />
+    <None Include="DashboardNotifications\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b081fa99-3b50-46d4-b47e-ac8c139ae240}</SharePointProjectItemId>
+    </None>
+    <None Include="DatabaseAccessRequest\DatabaseAccessRequest.webpart" />
+    <None Include="DatabaseAccessRequest\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{edfddc39-c50d-4e13-8d6a-c301a73bdb57}</SharePointProjectItemId>
+    </None>
+    <None Include="ErrorPage\ErrorPage.webpart" />
+    <None Include="ErrorPage\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{24feb2eb-54d6-4656-8aeb-b7c001e0a87d}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{4c09c643-a8ce-4f9c-840b-7b6246e81ab0}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="LocalTravelRequest1\LocalTravelRequest1.webpart" />
+    <None Include="LocalTravelRequest1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{fde773b7-5886-4c11-9281-ef63d57548d5}</SharePointProjectItemId>
+    </None>
+    <None Include="UserName\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{793550f6-5eb3-478b-bd03-56311c220d93}</SharePointProjectItemId>
+    </None>
+    <None Include="UserName\UserName.webpart" />
+    <None Include="VacationRequestCreate\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{dfae6a03-ec10-4ea2-93a9-f9e507e5a0c4}</SharePointProjectItemId>
+    </None>
+    <None Include="VacationRequestCreate\VacationRequestCreate.webpart" />
+    <None Include="Menu\Menu.webpart" />
+    <None Include="Menu\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c1420fdf-946f-4c12-b741-c0cc6bc41df7}</SharePointProjectItemId>
+    </None>
+    <None Include="news_wp\news_wp.webpart" />
+    <None Include="news_wp\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{24b1b197-76da-46e9-81c2-6ab3c02e8b0f}</SharePointProjectItemId>
+    </None>
+    <None Include="New_Request\New_Request.webpart" />
+    <None Include="New_Request\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4d692dbc-cbf0-4c82-be00-676c34f3c859}</SharePointProjectItemId>
+    </None>
+    <None Include="Notifications\Notifications.webpart" />
+    <None Include="Notifications\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bcbb82a6-310d-47dc-b907-111d3d5862d5}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{db26e252-73a2-47c3-ba77-bc6f3ba0ed0a}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Print\Print.webpart" />
+    <None Include="Print\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{089efad5-a587-4b06-bc18-6f3556d1ebcb}</SharePointProjectItemId>
+    </None>
+    <None Include="Statistics\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{4a11c54d-6080-4aea-a3c8-c1d9be941263}</SharePointProjectItemId>
+    </None>
+    <None Include="Statistics\Statistics.webpart" />
+    <None Include="VacationRequestView\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a0847466-a38b-4db6-9aea-de917755b5e7}</SharePointProjectItemId>
+    </None>
+    <None Include="VacationRequestView\VacationRequestView.webpart" />
+    <None Include="ViewDAR\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{87721cff-5ca2-4f83-869d-1673d1b83c92}</SharePointProjectItemId>
+    </None>
+    <None Include="ViewDAR\ViewDAR.webpart" />
+    <None Include="ViewLTR\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{11b2d764-9ea6-4e7c-9582-8ea3e42867a3}</SharePointProjectItemId>
+    </None>
+    <None Include="ViewLTR\ViewLTR.webpart" />
+    <None Include="ViewRecRequests\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{7bf08ea9-e596-4b8b-b1db-cc535c6ffde4}</SharePointProjectItemId>
+    </None>
+    <None Include="ViewRecRequests\ViewRecRequests.webpart" />
+    <None Include="Welcome\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{53d509ac-3a76-452f-8a54-882f66e41b6f}</SharePointProjectItemId>
+    </None>
+    <None Include="Welcome\Welcome.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DashboardNotifications\DashboardNotificationsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="DashboardNotifications\Elements.xml" />
+    <Content Include="DatabaseAccessRequest\DatabaseAccessRequestUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="DatabaseAccessRequest\Elements.xml" />
+    <Content Include="ErrorPage\Elements.xml" />
+    <Content Include="ErrorPage\ErrorPageUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="itextsharp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LocalTravelRequest1\Elements.xml" />
+    <Content Include="LocalTravelRequest1\LocalTravelRequest1UserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="UserName\Elements.xml" />
+    <Content Include="UserName\UserNameUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="VacationRequestCreate\Elements.xml" />
+    <Content Include="VacationRequestCreate\VacationRequestCreateUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Menu\Elements.xml" />
+    <Content Include="Menu\MenuUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="news_wp\Elements.xml" />
+    <Content Include="news_wp\news_wpUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="New_Request\Elements.xml" />
+    <Content Include="New_Request\New_RequestUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Notifications\Elements.xml" />
+    <Content Include="Notifications\NotificationsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Print\Elements.xml" />
+    <Content Include="Print\PrintUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Statistics\Elements.xml" />
+    <Content Include="Statistics\StatisticsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="VacationRequestView\Elements.xml" />
+    <Content Include="VacationRequestView\VacationRequestViewUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ViewDAR\Elements.xml" />
+    <Content Include="ViewDAR\ViewDARUserControl.ascx" />
+    <Content Include="ViewLTR\Elements.xml" />
+    <Content Include="ViewLTR\ViewLTRUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ViewRecRequests\Elements.xml" />
+    <Content Include="ViewRecRequests\ViewRecRequestsUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Welcome\Elements.xml" />
+    <Content Include="Welcome\WelcomeUserControl.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="false" />
+</Project>

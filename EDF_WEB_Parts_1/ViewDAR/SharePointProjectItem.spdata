@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="ViewDARUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="ViewDAR\" Type="ElementManifest" />
+    <ProjectItemFile Source="ViewDAR.webpart" Target="ViewDAR\" Type="ElementFile" />
+    <ProjectItemFile Source="ViewDARUserControl.ascx" Target="CONTROLTEMPLATES\EDF_WEB_Parts_1\ViewDAR\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="EDF_WEB_Parts_1.ViewDAR" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

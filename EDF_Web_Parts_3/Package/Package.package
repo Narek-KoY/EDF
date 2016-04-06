@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="68c76879-6066-4f93-9096-3e1d7acef13e" solutionId="68c76879-6066-4f93-9096-3e1d7acef13e" resetWebServer="false" name="EDF_Web_Parts_3" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="EDF_CommonData.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\EDF_CommonData\EDF_CommonData.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="e2495783-348e-4b1e-97c0-217c5f0486cd" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="4c4f5ce7-3016-45ee-ac35-4f340bbd4241" />
+  </projectItems>
+</package>

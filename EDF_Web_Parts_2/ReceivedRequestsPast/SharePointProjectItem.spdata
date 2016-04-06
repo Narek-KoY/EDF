@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="ReceivedRequestsPastUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="ReceivedRequestsPast\" Type="ElementManifest" />
+    <ProjectItemFile Source="ReceivedRequestsPast.webpart" Target="ReceivedRequestsPast\" Type="ElementFile" />
+    <ProjectItemFile Source="ReceivedRequestsPastUserControl.ascx" Target="CONTROLTEMPLATES\EDF_Web_Parts_2\ReceivedRequestsPast\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="EDF_Web_Parts_2.ReceivedRequestsPast" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

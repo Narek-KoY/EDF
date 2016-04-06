@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDF_CommonData", "EDF_CommonData\EDF_CommonData.csproj", "{44D8A2C7-B39B-4951-844C-455AE303964E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDF_WEB_Parts_1", "EDF_WEB_Parts_1\EDF_WEB_Parts_1.csproj", "{04FDA265-AEC7-4776-B4D0-0D6B09D043EA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6CAE4910-ECDD-437A-AFCA-8A33481F4BFF} = {6CAE4910-ECDD-437A-AFCA-8A33481F4BFF}
+		{9B5D18B0-898F-4923-8CAD-65AB36D40A51} = {9B5D18B0-898F-4923-8CAD-65AB36D40A51}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDF_Web_Parts_2", "EDF_Web_Parts_2\EDF_Web_Parts_2.csproj", "{6CAE4910-ECDD-437A-AFCA-8A33481F4BFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDF_Web_Parts_3", "EDF_Web_Parts_3\EDF_Web_Parts_3.csproj", "{9B5D18B0-898F-4923-8CAD-65AB36D40A51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44D8A2C7-B39B-4951-844C-455AE303964E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44D8A2C7-B39B-4951-844C-455AE303964E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44D8A2C7-B39B-4951-844C-455AE303964E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44D8A2C7-B39B-4951-844C-455AE303964E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FDA265-AEC7-4776-B4D0-0D6B09D043EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FDA265-AEC7-4776-B4D0-0D6B09D043EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FDA265-AEC7-4776-B4D0-0D6B09D043EA}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{04FDA265-AEC7-4776-B4D0-0D6B09D043EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FDA265-AEC7-4776-B4D0-0D6B09D043EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FDA265-AEC7-4776-B4D0-0D6B09D043EA}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6CAE4910-ECDD-437A-AFCA-8A33481F4BFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAE4910-ECDD-437A-AFCA-8A33481F4BFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAE4910-ECDD-437A-AFCA-8A33481F4BFF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6CAE4910-ECDD-437A-AFCA-8A33481F4BFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAE4910-ECDD-437A-AFCA-8A33481F4BFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CAE4910-ECDD-437A-AFCA-8A33481F4BFF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9B5D18B0-898F-4923-8CAD-65AB36D40A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5D18B0-898F-4923-8CAD-65AB36D40A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5D18B0-898F-4923-8CAD-65AB36D40A51}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9B5D18B0-898F-4923-8CAD-65AB36D40A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5D18B0-898F-4923-8CAD-65AB36D40A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B5D18B0-898F-4923-8CAD-65AB36D40A51}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://shpedf.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EDF_CommonData\\EDF_CommonData.csproj
+		SccProjectName1 = EDF_CommonData
+		SccLocalPath1 = EDF_CommonData
+		SccProjectUniqueName2 = EDF_WEB_Parts_1\\EDF_WEB_Parts_1.csproj
+		SccProjectName2 = EDF_WEB_Parts_1
+		SccLocalPath2 = EDF_WEB_Parts_1
+		SccProjectUniqueName3 = EDF_Web_Parts_2\\EDF_Web_Parts_2.csproj
+		SccProjectName3 = EDF_Web_Parts_2
+		SccLocalPath3 = EDF_Web_Parts_2
+		SccProjectUniqueName4 = EDF_Web_Parts_3\\EDF_Web_Parts_3.csproj
+		SccProjectName4 = EDF_Web_Parts_3
+		SccLocalPath4 = EDF_Web_Parts_3
+	EndGlobalSection
+EndGlobal
