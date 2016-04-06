@@ -583,7 +583,6 @@ namespace EDF_CommonData
                 }
                 else
                 {
-                    //MessageBox.Show("\nWe did not find that group in that domain, perhaps the group resides in a different domain?");
                 }
             });
             return users;
