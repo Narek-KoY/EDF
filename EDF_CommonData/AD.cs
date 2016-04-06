@@ -493,28 +493,6 @@ namespace EDF_CommonData
 
         #region Private Methods
 
-        //static EDF_SPUser GetDicUser(string key)
-        //{
-        //    if (SUsers.ContainsKey(key))
-        //    {
-        //        return SUsers[key];
-        //    }
-        //    else
-        //    {
-        //        foreach (SPListItem li in AD.GetSPListByName("Vacation_Approve"))
-        //        {
-        //            if (li["Title"].ToString().ToLower() == key)
-        //            {
-        //                string group = li["GroupName"].ToString();
-        //                SUsers.Remove(key);
-        //                SUsers.Add(key, AD.GetGroupUsers(group)[0]);
-        //                return SUsers[key];
-        //            }
-        //        }
-        //        throw new Exception(string.Format("There is not {0} user", key));
-        //    }
-        //}
-
         static EDF_Group GetDicGroup(string key)
         {
             if (SGroups.ContainsKey(key))
