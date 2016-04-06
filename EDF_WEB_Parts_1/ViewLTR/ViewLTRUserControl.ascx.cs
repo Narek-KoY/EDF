@@ -319,10 +319,8 @@ namespace EDF_WEB_Parts_1.ViewLTR
 
                             string Visit_url = SPContext.Current.Web.Url + "/SitePages/ViewLTR.aspx?rid=" + Request_ID;
 
-
                             if (!AD.Domain.Contains("pele"))
                                 Notificaion.sendMail("EDF - Notification", carpoolemail, msg + "<br/>" + Visit_url);
-
                         }
                     }
 
@@ -356,10 +354,8 @@ namespace EDF_WEB_Parts_1.ViewLTR
 
                         string Visit_url = SPContext.Current.Web.Url + "/SitePages/ViewLTR.aspx?rid=" + Request_ID;
 
-
                         if (!AD.Domain.Contains("pele"))
                             Notificaion.sendMail("EDF - Notification", carpoolemail, msg + "<br/>" + Visit_url);
-
                     }
                 }
 
@@ -395,32 +391,6 @@ namespace EDF_WEB_Parts_1.ViewLTR
             {
                 LTR.Update(Request_ID);
 
-                //if (LTR.CarIsChecked(Request_ID))
-                //{
-                //    string TypeName = Request_type.GetTypeName(Request_ID);
-
-                //    string carpoolemail = AD.CarPool;
-
-                //        string s = autor.FullName;
-                //        DataTable dt = LTR.Get(Request_ID);
-
-                //        string msg = string.Format("<b>ID: {1} {2}</b> requested car for transport at {5} (<b>{3}-{4}</b> {0})", s, Request_type.GetUppers(TypeName), Request_ID, ((DateTime)dt.Rows[0]["Start_Date"]).ToString("dd/mm/yyyy"), ((DateTime)dt.Rows[0]["End_Date"]).ToString("dd/mm/yyyy"), dt.Rows[0]["Car_Time"].ToString());
-
-                //    //string msg = string.Format("<b>{0}</b> {1} (ID: {2} {3}) <b>approved from all</b>", s, TypeName, Request_type.GetUppers(TypeName), Request_ID);
-
-                //    string Visit_url = SPContext.Current.Web.Url + "/SitePages/ViewLTR.aspx?rid=" + Request_ID;
-
-
-                //        if (!AD.Domain.Contains("mart"))
-                //            Notificaion.sendMail("EDF - Notification", carpoolemail, msg + "<br/>" + Visit_url);
-
-                //}
-
-                //  string path = PDF1.New(Request_ID,Autor_id);
-
-                // PDF.SaveInSP(path, Autor_id, Request_ID);
-
-
                 string TName = Request_type.GetTypeName(Request_ID);
 
                 string ms = string.Format("<b>{0}</b> {1} (ID: {2} {3}) <b>approved from all</b>", autor.FullName + "’s", TName, Request_type.GetUppers(TName), Request_ID);
@@ -436,7 +406,6 @@ namespace EDF_WEB_Parts_1.ViewLTR
                     Notificaion.Add(us.Login, SPContext.Current.Web.Url + "/SitePages/ViewLTR.aspx?rid=" + Request_ID, ms, autor.PictureUrl, Request_type.GetId(Request_ID));
                     if (us.HasReplacement)
                         Notificaion.Add(us.Replacement.Login, SPContext.Current.Web.Url + "/SitePages/ViewLTR.aspx?rid=" + Request_ID, ms, autor.PictureUrl, Request_type.GetId(Request_ID));
-
                 }
             }
             if (b)

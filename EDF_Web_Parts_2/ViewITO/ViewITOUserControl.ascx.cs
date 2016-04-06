@@ -517,7 +517,6 @@ namespace EDF_Web_Parts_2.ViewITO
                     if (us.HasReplacement)
                         Notificaion.Add(us.Replacement.Login, SPContext.Current.Web.Url + "/SitePages/ViewITO.aspx?rid=" + Request_ID, ms, autor.PictureUrl, Request_type.GetId(Request_ID));
                 }
-
             }
             if (b)
                 Response.Redirect(SPContext.Current.Web.Url + "/SitePages/Succes.aspx");

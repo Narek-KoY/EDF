@@ -281,18 +281,6 @@ namespace EDF_CommonData
 
         public static void Update(string Request_Id)
         {
-
-            //string comand = string.Format("IF (SELECT MAX(Number) FROM [ITO]) IS NOT NULL " +
-            //                                "BEGIN "+
-            //                                    " IF (( SELECT TOP 1  [Number] FROM [LTR] WHERE Number <> 0 ORDER BY id DESC  ) > ( SELECT TOP 1  [Number] FROM [ITO] WHERE Number <> 0 ORDER BY id DESC))" +
-            //                                        " BEGIN " +
-            //                                            " UPDATE [LTR] SET Number=(( SELECT TOP 1 [Number] FROM [LTR] WHERE Number <> 0 ORDER BY id DESC ) + 1) WHERE Request_Id = '{0}' " +
-            //                                        " END " +
-            //                                    " ELSE " +
-            //                                        " UPDATE [LTR] SET Number=((SELECT TOP 1  [Number] FROM [ITO] WHERE Number <> 0 ORDER BY id DESC) + 1) WHERE Request_Id = '{0}' " +
-            //                                " END "+
-            //                                " ELSE "+
-            //                                    " UPDATE [LTR] SET Number=1 WHERE Request_Id = '{0}'", Request_Id);
             string comand = string.Empty;
             if (DateTime.Now.Year == 2015)
                 comand = string.Format("IF (SELECT MAX(Number) FROM [ITO] where Filling_date > Cast('2015-03-01' as date)) IS NOT NULL " +
@@ -454,58 +442,6 @@ namespace EDF_CommonData
             {
                 return false;
             }
-            // for delete 
-            //            SqlConnection con = new SqlConnection(Connection.connectionString);
-            //            string Ins = string.Format(@"insert into [ITO] (Request_Id,
-            //                                                            Number,
-            //                                                            Filling_Date,
-            //                                                            Department_And_Position, 
-            //                                                            City,
-            //                                                            Organization,
-            //                                                            Start_Date,
-            //                                                            End_Date, 
-            //                                                            Purpose,
-            //                                                            Budgeted,
-            //                                                            Amount,
-            //                                                            Replacement_Id,
-            //                                                            Daily,                                                            
-            //                                                            Hotel,
-            //                                                            Hotel_Name,
-            //                                                            Hotel_Dates,
-            //                                                            Hotel_Location,
-            //                                                            Hotel_Phone,
-            //                                                            Hotel_Payment) values ('{0}','{1}','{2}','{3}','{4}',{5},'{6}','{7}',N'{8}','{9}',{10},{11},'{12}','{13}',{14},{15},{16},{17},{18})",
-            //                                            RequestId.ToString(),
-            //                                            Number.ToString(),
-            //                                            DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
-            //                                            DepartmentAndPosition,
-            //                                            City,
-            //                                            (Organization == null ? "NULL" : "'" + Organization + "'"),
-            //                                            StartDate.ToString("yyyy-MM-dd HH:mm:ss"),
-            //                                            EndDate.ToString("yyyy-MM-dd HH:mm:ss"),
-            //                                            Purpose,
-            //                                            Budgeted.ToString(),
-            //                                            (Amount == decimal.Zero ? "NULL" : "'" + Amount.ToString() + "'"),
-            //                                            (ReplacementId == null ? "NULL" : "'" + ReplacementId + "'"),
-            //                                            Daily.ToString(),
-            //                                            (Hotel == null ? "False" : "True"),
-
-            //                                            (Hotel == null ? "NULL" : "'" + Hotel.Name + "'"),
-            //                                            (Hotel == null ? "NULL" : "'" + Hotel.Dates + "'"),
-            //                                            (Hotel == null ? "NULL" : "'" + Hotel.Location + "'"),
-            //                                            (Hotel == null ? "NULL" : "'" + Hotel.Phone + "'"),
-            //                                            (Hotel == null ? "NULL" : "'" + Hotel.Payment + "'")
-            //                                            );
-
-            //            SqlCommand InsCom = new SqlCommand(Ins, con);
-            //            try
-            //            {
-            //                con.Open();
-            //                InsCom.ExecuteNonQuery();
-            //            }
-            //            catch { return false; }
-            //            finally { con.Close(); }
-            //            return true;
         }
 
         public static string GetNumber(string RequestId)
@@ -612,19 +548,6 @@ namespace EDF_CommonData
 
         public static void Update(string Request_Id)
         {
-            //string comand = string.Format("IF (SELECT MAX(Number) FROM [LTR]) IS NOT NULL "+
-            //                                " BEGIN "+
-            //                                    " IF (( SELECT TOP 1  [Number] FROM [LTR] WHERE Number <> 0 ORDER BY id DESC  ) > ( SELECT TOP 1  [Number] FROM [ITO] WHERE Number <> 0 ORDER BY id DESC))" +
-            //                                    " BEGIN " +
-            //                                    " UPDATE [ITO] SET Number=(( SELECT TOP 1 [Number] FROM [LTR] WHERE Number <> 0 ORDER BY id DESC ) + 1) WHERE Request_Id = '{0}' " +
-            //                                    " END " +
-            //                                    " ELSE " +
-            //                                    " UPDATE [ITO] SET Number=(( SELECT TOP 1 [Number] FROM [ITO] WHERE Number <> 0 ORDER BY id DESC ) + 1) WHERE Request_Id = '{0}' " +
-            //                                " END "+
-            //                                    " ELSE "+
-            //                                    " UPDATE [ITO] SET Number=(( SELECT TOP 1 [Number] FROM [ITO] WHERE Number <> 0 ORDER BY id DESC ) + 1) WHERE Request_Id = '{0}'", Request_Id);
-
-
             string comand = string.Empty;
             if (DateTime.Now.Year == 2015)
                 comand = string.Format("IF (SELECT MAX(Number) FROM [LTR] where  Filling_date > Cast('2015-04-01' as date)) IS NOT NULL " +
@@ -798,22 +721,6 @@ END", Request_ID, Status);
                     tmp_str += "'" + tmpUser.Login + "',";
                 }
                 tmp_str += "'" + current.Login + "'";
-
-                /// for delete
-                //                string tttt = @"SELECT * FROM 
-                //(SELECT app_rej.[User_ID], app_rej.[Request_ID], Notificaion.Visit_url, Notificaion.notification, app_rej.App_rej, app_rej.Status,
-                //(SELECT COUNT(*) as tmp_count FROM [Approve_reject] as tmp_app_rej WHERE tmp_app_rej.Request_ID = app_rej.Request_ID AND tmp_app_rej.Status = app_rej.Status AND tmp_app_rej.App_rej IS NOT NULL) as t_a_count
-                //  FROM [Approve_reject] app_rej
-                //        INNER JOIN Notificaion
-                //      ON Notificaion.User_id = App_rej.User_ID AND (select item FROM (select item, ROW_NUMBER() over (order by item) as rowNum  from fnSplit(Notificaion.Visit_url, '?rid=')) as temp WHERE temp.rowNum = 1) = app_rej.[Request_ID]
-                //  WHERE 
-                //   app_rej.App_rej IS NULL
-                //	AND DATEDIFF(DAY, app_rej.Date_add, GETDATE()) >=2 AND DATEDIFF(DAY, Notificaion.Date_add, GETDATE()) >=2) as tmp WHERE tmp.t_a_count = 0";
-
-
-
-
-
                 comand = string.Format(@" SELECT COUNT(ID) as count FROM (SELECT [Approve_reject].ID as ID FROM [Approve_reject]  WHERE ([Approve_reject].Request_ID = '{0}') AND ([Approve_reject].User_ID IN({1}) OR [Approve_reject].Rep_Id IN({1}))
 UNION
 SELECT [Id] as ID FROM [Request] WHERE Autor_id IN({1}) AND Id='{0}'
@@ -850,8 +757,7 @@ SELECT [ID] as ID FROM [Request_Substitute] WHERE [REQUEST_ID] = '{0}' AND [User
                 else
                 {
                     reader.Close();
-                    //if (current.StatisticsAccess)
-                    //{
+                   
                     DataTable rt = EDF.GetRequestById(int.Parse(Request_ID));
                     foreach (DataRow dr in rt.Rows)
                     {
@@ -863,8 +769,6 @@ SELECT [ID] as ID FROM [Request_Substitute] WHERE [REQUEST_ID] = '{0}' AND [User
                             }
                         }
                     }
-                    //  }
-
                     string notCommand = string.Format("SELECT COUNT(*) as count FROM [Notificaion] WHERE User_id = '{0}' AND (select item FROM (select item, ROW_NUMBER() over (order by item) as rowNum  from fnSplit(Notificaion.Visit_url, '?rid=')) as temp WHERE temp.rowNum = 1) = '{1}'", current.Login, Request_ID);
 
                     com = new SqlCommand(notCommand, con);
@@ -1481,44 +1385,6 @@ SELECT [ID] as ID FROM [Request_Substitute] WHERE [REQUEST_ID] = '{0}' AND [User
             return table;
         }
 
-        //public static DataTable GetOldRequest()
-        //{
-        //    string comand = string.Format("SELECT [User_ID], [Request_ID] FROM [Approve_reject]  WHERE App_rej is null AND ([Date_add] between convert(datetime,'{0}',101) and convert(datetime,'{1}',101))", DateTime.Now.AddYears(-2), DateTime.Now.AddDays(-2));
-
-        //    DataTable table = new DataTable("OldRequest");
-
-        //    try
-        //    {
-        //        SqlConnection con = new SqlConnection(Connection.connectionString);
-
-        //        SqlDataAdapter adapter = new SqlDataAdapter(comand, con);
-
-        //        adapter.Fill(table);
-        //    }
-        //    catch { }
-
-        //    return table;
-        //}
-
-        //public static DataTable getIDs(string Request_ID, string User_ID)
-        //{
-        //    string comand = string.Format("SELECT [ID] FROM [Approve_reject]  WHERE Request_ID = '{0}' AND User_ID = '{1}'", Request_ID, User_ID);
-
-        //    DataTable table = new DataTable("ID");
-
-        //    try
-        //    {
-        //        SqlConnection con = new SqlConnection(Connection.connectionString);
-
-        //        SqlDataAdapter adapter = new SqlDataAdapter(comand, con);
-
-        //        adapter.Fill(table);
-        //    }
-        //    catch { }
-
-        //    return table;
-        //}
-
         public static void DeleteFreeRequests(string Request_ID)
         {
             string delstr = string.Format("delete from Approve_reject where Request_ID = '{0}' AND App_rej is null ", Request_ID);
@@ -1536,7 +1402,6 @@ SELECT [ID] as ID FROM [Request_Substitute] WHERE [REQUEST_ID] = '{0}' AND [User
             }
         }
     }
-
     public static class Request_type
     {
         public static string GetTypeName(string Request_ID)
@@ -1720,9 +1585,6 @@ SELECT [ID] as ID FROM [Request_Substitute] WHERE [REQUEST_ID] = '{0}' AND [User
             {
                 if (AD.Domain.Contains("pele"))
                     To = "Narek.Arzumanyan@ucom.am";
-
-              //  SPWeb oWeb = SPContext.Current.Web;
-              //  SPListItemCollection ips = AD.GetSPListByName("SMTP");
 
                 string fromEmail = Constants.EmailFrom;
                 string smtp = Constants.EmailHost;
